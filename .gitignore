@@ -1,0 +1,10 @@
+.env
+.env.*
+Credentials/
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.db
+dump.rdb
+*.gguf
