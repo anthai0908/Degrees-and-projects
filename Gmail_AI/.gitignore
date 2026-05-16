@@ -1,0 +1,19 @@
+# OS/editor
+.DS_Store
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local data
+*.db
+raft/*.db
+
+# Secrets
+.env
+.env.*
+Credentials/
+
+# Local model weights
+*.gguf
