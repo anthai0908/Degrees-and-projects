@@ -15,7 +15,7 @@ Use only these action types:
 - `input`
 - `upload`
 - `extract` : This is only for extracting general compact observation of the current page
-
+- `switch_to_tab`: swich to another tab to handle login/oauth request from page
 Action constraints:
 - `goto`: `target` must be URL, `value` must be `null`.
 - `click`: `target` must be CSS selector, `value` must be `null`.

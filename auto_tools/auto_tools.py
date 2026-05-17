@@ -15,8 +15,8 @@ class AutoTool:
         self.driver = webdriver.Firefox()
         self.timeout_sec = timeout_sec
         
-    def get_general_compact_observation_all(self, timeout=8):
-        WebDriverWait(self.driver, timeout).until(
+    def get_general_compact_observation_all(driver, timeout=8):
+        WebDriverWait(driver, timeout).until(
             lambda d: d.execute_script("return document.readyState") in ("interactive", "complete")
         )
     
@@ -38,7 +38,7 @@ class AutoTool:
             // keep full meaningful text
             return (doc.body?.innerText || "").replace(/\n{3,}/g, "\n\n").trim();
         """
-        return self.driver.execute_script(js)
+        return driver.driver.execute_script(js)
     
 
     def _to_action(self, action: Union[Action, Dict[str, Any]]) -> Action:

@@ -11,7 +11,6 @@ class CompanyModel(BaseModel):
         sa_column=Column(Integer, primary_key=True, autoincrement=True)
     )
     company_name: str = Field(default="", unique=True, index=True, max_length=200)
-    field: str = Field(default="")
-    jobs: Optional[List["JobModel"]] = Relationship(back_populates="jobs")
+    jobs: Optional[List["JobModel"]] = Relationship(back_populates="company")
     
     
